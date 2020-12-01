@@ -2695,7 +2695,7 @@ return list (selfFields).''' + comparatorName + '''(list (otherFields));
             else:
                 if isMethod:
                     if jsCall:
-                        self.emit ('{}: function', self.filterId (nodeName), 'async ' if anAsync else '')
+                        self.emit ('{}: {}function', self.filterId (nodeName), 'async ' if anAsync else '')
                     else:
                         if isStaticMethod:
                             self.emit ('get {} () {{return {}function', self.filterId (nodeName), 'async ' if anAsync else '')
